@@ -1,22 +1,35 @@
 <template>
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <h1>WYSIWYG Editor (Vue + At.js)</h1>
+        <WYSIWYG v-model="wysiwygContent"/>
+        <pre class="debug">{{wysiwygContent}}</pre>
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue';
+    import WYSIWYG from './components/WYSIWYG';
 
     export default {
         name: 'app',
         components: {
-            HelloWorld
+            WYSIWYG
+        },
+        data() {
+            return {
+                wysiwygContent: ''
+            };
         }
     };
 </script>
 
 <style>
+    :root {
+        --color-white: #FFFFFF;
+        --color-gray: #dddddd;
+        --color-black: #333333;
+        --color-green: #62B587;
+    }
+
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -24,5 +37,12 @@
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
+    }
+
+    .debug {
+        text-align: left;
+        background-color: var(--color-gray);
+        padding: 12px;
+        white-space: pre-line;
     }
 </style>
