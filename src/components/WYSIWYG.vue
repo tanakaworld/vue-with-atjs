@@ -64,7 +64,21 @@
                 ]
             };
         },
+        beforeCreate() {
+            // eslint-disable-next-line
+            console.log('[==> C ]beforeCreate');
+        },
+        created() {
+            // eslint-disable-next-line
+            console.log('[==> C ]created');
+        },
+        beforeMount() {
+            // eslint-disable-next-line
+            console.log('[==> C ]beforeMount');
+        },
         mounted() {
+            // eslint-disable-next-line
+            console.log('[==> C ]mounted');
             const $el = $(this.$refs['WYSIWYG']);
 
             this.customTagOptions.forEach(opt => {
@@ -79,10 +93,27 @@
                 $el.atwho(opt);
             });
         },
+        beforeUpdate() {
+            // eslint-disable-next-line
+            console.log('[==> C ]beforeUpdate');
+        },
+        updated() {
+            // eslint-disable-next-line
+            console.log('[==> C ]updated');
+        },
+        beforeDestroy() {
+            // eslint-disable-next-line
+            console.log('[==> C ]beforeDestroy');
+        },
+        destroyed() {
+            // eslint-disable-next-line
+            console.log('[==> C ]destroyed');
+        },
         methods: {
             emitChange() {
                 const $el = $(this.$refs['WYSIWYG']);
-
+                // eslint-disable-next-line
+                console.log('[==> C ]emitChange');
                 this.$emit('input', $el.html());
             },
             handleFocus(evt) {

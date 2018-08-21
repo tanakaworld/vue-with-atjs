@@ -18,7 +18,39 @@
             return {
                 wysiwygContent: ''
             };
-        }
+        },
+        beforeCreate() {
+            // eslint-disable-next-line
+            console.log('[P]beforeCreate');
+        },
+        created() {
+            // eslint-disable-next-line
+            console.log('[P]created');
+        },
+        beforeMount() {
+            // eslint-disable-next-line
+            console.log('[P]beforeMount');
+        },
+        mounted() {
+            // eslint-disable-next-line
+            console.log('[P]mounted');
+        },
+        beforeUpdate() {
+            // eslint-disable-next-line
+            console.log('[P]beforeUpdate');
+        },
+        updated() {
+            // eslint-disable-next-line
+            console.log('[P]updated');
+        },
+        beforeDestroy() {
+            // eslint-disable-next-line
+            console.log('[P]beforeDestroy');
+        },
+        destroyed() {
+            // eslint-disable-next-line
+            console.log('[P]destroyed');
+        },
     };
 </script>
 
