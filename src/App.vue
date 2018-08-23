@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <h1>WYSIWYG Editor (Vue + At.js)</h1>
+        <h1>{{txt}}</h1>
+        <button @click="txt = new Date()">Update Parent</button>
+
         <WYSIWYG v-model="wysiwygContent"/>
         <pre class="debug">{{wysiwygContent}}</pre>
     </div>
@@ -16,6 +18,7 @@
         },
         data() {
             return {
+                txt: 'WYSIWYG Editor (Vue + At.js)',
                 wysiwygContent: ''
             };
         },

@@ -5,6 +5,8 @@
              @focus="handleFocus"
              @input="emitChange"
              v-html="content"></div>
+        <h1>{{txt}}</h1>
+        <button @click="txt = new Date()">Update Child</button>
     </div>
 </template>
 
@@ -12,6 +14,8 @@
     import 'at.js';
     import 'at.js/dist/css/jquery.atwho.min.css';
     import $ from 'jquery';
+
+    // TODO check https://teratail.com/questions/86786
 
     export default {
         name: "WYSIWYG",
@@ -27,6 +31,7 @@
         },
         data() {
             return {
+                txt: 'BBBBB',
                 content: this.value,
                 customTagOptions: [
                     {
